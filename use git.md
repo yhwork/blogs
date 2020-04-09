@@ -1,5 +1,7 @@
 # 我的git使用
 
+新建一个房子，给房子起一个名字，想要进去打开门（放到本地），进去（提交远程），关上门
+
 #### 初始化本地仓库
 
 ```js
@@ -20,11 +22,18 @@ git config -- global user.email 'ceshi.@qq.com'
 
 ```
 
-- 把代码放到仓库
+#### 把代码放到仓库
 
-  1.  提交代码
+- 提交代码
 
-     `git add  ./demo.js`
+```js
+// 提交到本地仓库 
+git add ./demo.js
+// 提交到远程仓库  -m  message 
+git commit -m '说明0.1v版本'
+```
+
+
 
 
 
