@@ -78,11 +78,40 @@ git checkout dev    // 切换之前要创建分支
 
 // 分支合并
 git merge dev      // 合并分支的内容，把当前分支于指定的分支合并
+// 从主分支进入合并  单分支 
+
+// 删除分支 
+git branch -d dev   // 注意不能删除  当前分支
+```
+
+- 冲突解决
+
+```js
+// 原因  devs修改完功能 提交了   masters修改了功能也提交了  在master中  合并分支
+<<<<<<< HEAD
+这是在 master  分支中的功能
+=======
+devs 分支的一半
+>>>>>>> devs
+
+
+// head  指向当前最新的提交
 ```
 
 
 
+- 代码提交
 
+  拿到 githup的地址
+
+  ```js
+  git push 
+  // https://gitee.com/xhwork/blok.git
+  ```
+
+  
+
+`clear  清屏`
 
 #### 常见问题
 
@@ -104,15 +133,64 @@ git merge dev      // 合并分支的内容，把当前分支于指定的分支�
 
 
 
+1. 先确认当前分支是你的工作分支
+   - git checkout working    --force 
+2. 把本地代码提交到本地仓库
+   - git add .  
+   - git commit -m"$1" -a 
+3. 切换到主分支
+   - git checkout master 
+4. 并将默认分支和中央最新版本合并  
+   - git pull origin master 
+5. 本地仓库和主分支(默认分支)进行合并
+   - git merge working    
+6. 提交到中央版本库
+   - git push origin master   
+7. 切回到你的工作分支
+   - git checkout working   --force   
+8. 如果不小心动了生产环境（就是只从中央版本库pull到本地）的文件，只好将本地版本退回一个，再从中央代码库pull代码合并 
+   - git reset --hard HEAD   
 
 
-1.哈哈哈哈哈啊啊
 
-2.啦啦啦啦啦啦
 
-3.呼呼呼呼呼
 
-4.新添加的  一会就没了
+# 使用命令行操作流程
+
+1. 执行命令 切换到master分支
+    `git checkout master` 
+2. 执行命令 拉取master最新稳定代码分支
+    ` git pull master` 
+3. 执行命令 新建一个分支并切换到该分支
+    ` git checkout -b newbranch` 
+4. 执行命令 将新的分支推送到远程服务器
+    ` git push --set-upstream origin newbranch` 
+5. 代码开发中 ，开发完成，提交代码操作如下
+    5.1 将不需要提交，无用的修改文件还原（尽量保持少的修改文件）
+    ` git checkout -- fileName`
+    5.2 将本地需要提交的文件隐藏（因为如果有文件冲突，将会拉取不了主分支代码）
+    ` git stash`
+    5.3 拉取主分支代码
+    ` git pull origin master`
+    5.4 还原隐藏的文件
+    ` git stash pop`
+    5.5 将需要提交的代码添加到暂存区
+    ` git add fileName`
+    5.6 将需要提交的代码提交到本地仓库
+    ` git commit -m "提交代码功能描述信息"`
+    5.6 将需要提交的代码提交到远程仓库
+    ` git push`
+    5.7 在浏览器客户端新建PR请求
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
 
 
