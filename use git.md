@@ -29,13 +29,28 @@ git config -- global user.email 'ceshi.@qq.com'
 ```js
 //第一步 提交到本地仓库 
 git add ./demo.js
-//第二部 提交到远程仓库  -m  message 
+//第二部 提交到远程版本仓库  -m  message 
 git commit -m '说明0.1v版本'
 ```
 
 
 
 
+
+#### 常见报错
+
+1. 没有添加 说明 `-m  ''`这时候需要退出  `esc`  `:q!` 回车
+
+2. 如果已经提交 `git add file`可使用 `git status ` 检查状态
+
+   ```js
+   git status 
+   // working directory clean 工作环境是干净的 已经提交过了
+   
+   // modified  修改过的文件
+   ```
+
+   
 
 
 
