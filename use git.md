@@ -32,7 +32,7 @@ git add ./demo.js   // ./具体文件名
 // git add ./   	// ./当前目录下所有修改的文件
 
 //第二部 提交到远程版本仓库  -m  message 
-git commit -m '说明0.1v版本' //  
+git commit -m '说明0.1v版本'  //  
 // git commit --all -m ''    // 直接提交到 远程仓库
 ```
 
@@ -49,10 +49,16 @@ git log
 // 谁提交了   Author
 // 提交的时间 Date
 
-git log --oneline
+git log --oneline   // 查看简洁版本的日志
 ```
 
-- 
+- 版本回退
+
+```js
+
+```
+
+
 
 
 
@@ -60,7 +66,7 @@ git log --oneline
 
 1. 没有添加 说明 `-m  ''`这时候需要退出  `esc`  `:q!` 回车
 
-2. 如果已经提交 `git add file`可使用 `git status ` 检查状态
+2. 如果已经提交 `git add `可使用 `git status ` 检查状态
 
    ```js
    git status 
