@@ -28,16 +28,31 @@ git config -- global user.email 'ceshi.@qq.com'
 
 ```js
 //第一步 提交到本地仓库 
-git add ./demo.js
+git add ./demo.js   // ./具体文件名  
+// git add ./   	// ./当前目录下所有修改的文件
+
 //第二部 提交到远程版本仓库  -m  message 
-git commit -m '说明0.1v版本'
+git commit -m '说明0.1v版本' //  
+// git commit --all -m ''    // 直接提交到 远程仓库
+```
+
+- 代码检查
+
+```js
+git status
+```
+
+- 查看日志
+
+```js
+git log
 ```
 
 
 
 
 
-#### 常见报错
+#### 常见问题
 
 1. 没有添加 说明 `-m  ''`这时候需要退出  `esc`  `:q!` 回车
 
@@ -47,7 +62,10 @@ git commit -m '说明0.1v版本'
    git status 
    // working directory clean 工作环境是干净的 已经提交过了
    
-   // modified  修改过的文件
+   // modified 红色 修改过的文件还没有到本地仓库 需使用  git add
+   // modified 绿色 修改过的文件还没有到远程仓库 需使用  git  commit -m '';
+   // nothing to commit, working tree clean 绿色  提交完成过了
+   
    ```
 
    
