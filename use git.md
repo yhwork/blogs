@@ -50,12 +50,31 @@ git log
 // 提交的时间 Date
 
 git log --oneline   // 查看简洁版本的日志
+// 版本号   备注
 ```
 
 - 版本回退
 
 ```js
+git reset -- hard head ~0   //从最近一次索引  0上一次  1上上次提交的代码
 
+
+// git reset -- hart 797a51d  //精确回到某一个版本     版本号  797a51d
+
+git  reflog  // 可以看到每一次版本切换的记录
+```
+
+- 分支处理
+
+```js
+// 创建分支
+git branch dev   // dev 是分支名称
+
+// 查看分支 
+git branch
+
+// 切换分支
+git checkout dev
 ```
 
 
@@ -84,7 +103,13 @@ git log --oneline   // 查看简洁版本的日志
 
 
 
+1.哈哈哈哈哈啊啊
 
+2.啦啦啦啦啦啦
+
+3.呼呼呼呼呼
+
+4.新添加的  一会就没了
 
 
 
