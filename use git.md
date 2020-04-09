@@ -68,13 +68,16 @@ git  reflog  // 可以看到每一次版本切换的记录
 
 ```js
 // 创建分支
-git branch dev   // dev 是分支名称
+git branch dev   // dev 是分支名称，在刚创建时dev分支的东西和master分支一样的
 
 // 查看分支 
 git branch
 
 // 切换分支
-git checkout dev
+git checkout dev    // 切换之前要创建分支
+
+// 分支合并
+git merge dev      // 合并分支的内容，把当前分支于指定的分支合并
 ```
 
 
