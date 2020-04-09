@@ -46,9 +46,13 @@ git status
 
 ```js
 git log
+// 谁提交了   Author
+// 提交的时间 Date
+
+git log --oneline
 ```
 
-
+- 
 
 
 
